@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="492.0" prefWidth="427.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ReportsController">
+   <children>
+      <Label layoutX="28.0" layoutY="42.0" text="%Reporting Tool">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ListView fx:id="reportListView" layoutX="55.0" layoutY="92.0" prefHeight="275.0" prefWidth="333.0" />
+      <RadioButton fx:id="typeMonthRB" layoutX="118.0" layoutY="382.0" mnemonicParsing="false" onAction="#onActionReportTypeMonth" text="%By Type/Month">
+         <toggleGroup>
+            <ToggleGroup fx:id="reportType" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="contactAppointments" layoutX="118.0" layoutY="409.0" mnemonicParsing="false" onAction="#onActionReportContactAppointments" text="%Appointments by Contact" toggleGroup="$reportType" />
+      <RadioButton fx:id="customerCountryRB" layoutX="118.0" layoutY="437.0" mnemonicParsing="false" onAction="#onActionReportCustomerCountry" text="%By Customer/Country" toggleGroup="$reportType" />
+      <Button layoutX="328.0" layoutY="442.0" mnemonicParsing="false" onAction="#onActionBack" text="%Back" />
+   </children>
+</AnchorPane>

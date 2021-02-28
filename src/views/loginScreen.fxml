@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="350.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.loginScreenController">
+   <children>
+      <HBox alignment="CENTER" layoutX="85.0" layoutY="141.0" prefHeight="34.0" prefWidth="256.0" spacing="40.0">
+         <children>
+            <Label alignment="CENTER" text="%Username:" />
+            <TextField fx:id="usernameTxtBox" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="85.0" layoutY="175.0" prefHeight="34.0" prefWidth="256.0" spacing="42.0">
+         <children>
+            <Label text="%Password:" />
+            <TextField fx:id="passwordTxtBox" />
+         </children>
+      </HBox>
+      <Label layoutX="40.0" layoutY="50.0" text="%Please Enter Your Login Credentials:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="174.0" layoutY="235.0" mnemonicParsing="false" onAction="#onActionLogin" text="%Login" />
+      <Button layoutX="315.0" layoutY="297.0" mnemonicParsing="false" onAction="#onActionExit" prefWidth="46.0" text="%Exit" />
+      <HBox alignment="CENTER" layoutX="82.0" layoutY="88.0" prefHeight="34.0" prefWidth="237.0">
+         <children>
+            <Label fx:id="localTimeZoneLbl" text="Label" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
